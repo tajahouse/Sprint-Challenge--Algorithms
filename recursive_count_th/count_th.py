@@ -28,6 +28,13 @@ Your function must utilize recursion. It cannot contain any loops.
 #         for 'th' in th_remaining_letters:
 #             return len(th_remaining_letters)
 
+def count_th(word):
+    if not word:
+        return 0
+    elif word[0] == 't' and word[1] == 'h':
+        return 1+ count_th(word[1:])
+    else:
+        return count_th(word[1:])
 
 
-print(count_th('abathath'))
+print(count_th('abathick'))
