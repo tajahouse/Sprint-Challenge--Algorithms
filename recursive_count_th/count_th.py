@@ -31,10 +31,9 @@ Your function must utilize recursion. It cannot contain any loops.
 def count_th(word):
     if not word:
         return 0
-    elif word[0] == 't' and word[1] == 'h':
+    if word[0] == 't' and word[1] == 'h':
         return 1+ count_th(word[1:])
     else:
         return count_th(word[1:])
 
-
-print(count_th('abathick'))
+print(count_th('abathicktititith'))
